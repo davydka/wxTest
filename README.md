@@ -16,4 +16,5 @@ apt-get install libwxbase3.0-0-unofficial \
 			wx3.0-doc
 
 g++ main.cpp `wx-config --cxxflags --libs` -o app
+~/Sites/wxWidgets-WX_3_0_BRANCH/samples/mediaplayer $ g++ mediaplayer.cpp `wx-config --cxxflags --libs std,media` -o app
 ```
