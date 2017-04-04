@@ -47,8 +47,8 @@ MyFrame::MyFrame()
     menuBar->Append( menuHelp, "&Help" );
     //SetMenuBar( menuBar );
 	//menuBar->Enable(false);
-    //CreateStatusBar();
-    //SetStatusText( "hello hello hello" );
+    CreateStatusBar();
+    SetStatusText( "hello hello hello" );
     Bind(wxEVT_MENU, &MyFrame::OnHello, this, ID_Hello);
     Bind(wxEVT_MENU, &MyFrame::OnAbout, this, wxID_ABOUT);
     Bind(wxEVT_MENU, &MyFrame::OnExit, this, wxID_EXIT);
@@ -56,8 +56,8 @@ MyFrame::MyFrame()
 
 	wxGraphicsPath path = wxGraphicsRenderer::GetDefaultRenderer()->CreatePath();
 	//path.AddEllipse(0, 0,GetRect().width-20,GetRect().height/2);
-	path.AddRectangle(0,0,640,448);
-	//path.AddRectangle(0,0,640,480);
+	//path.AddRectangle(0,0,640,448);
+	path.AddRectangle(0,0,640,480);
 	SetShape(path);
 	/*
 	wxPanel * panel = new wxPanel(this, wxID_ANY, wxDefaultPosition, wxSize(300, 300));
